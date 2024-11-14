@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Froula - Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+</head>
+<body>
+    <!-- Header/Nav -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                Joe Froula
+                <span class="logo-underline"></span>
+            </div>
+            <div class="nav-links">
+                <a href="#services" class="nav-link">
+                    <span>Services</span>
+                    <span class="nav-underline"></span>
+                </a>
+                <a href="#projects" class="nav-link">
+                    <span>Projects</span>
+                    <span class="nav-underline"></span>
+                </a>
+                <a href="#contact" class="nav-link">
+                    <span>Contact</span>
+                    <span class="nav-underline"></span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title fade-up">
+                Building Modern Web Solutions<span class="dot">.</span>
+            </h1>
+            <p class="hero-description fade-up delay-2">
+                Full-stack web developer specializing in creating powerful, scalable applications
+                with modern technologies.
+            </p>
+            <a href="#contact" class="cta-button fade-up delay-4">
+                Let's work together 
+                <i data-lucide="arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <div class="services-grid">
+                <div class="service-card slide-up">
+                    <div class="service-icon">
+                        <i data-lucide="monitor-smartphone"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>Creating responsive, modern user interfaces with React, Next.js, and other cutting-edge technologies.</p>
+                </div>
+                <div class="service-card slide-up delay-2">
+                    <div class="service-icon">
+                        <i data-lucide="code-square"></i>
+                    </div>
+                    <h3>Full Stack Solutions</h3>
+                    <p>End-to-end web application development with seamless integration between frontend and backend.</p>
+                </div>
+                <div class="service-card slide-up delay-4">
+                    <div class="service-icon">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <h3>Database Architecture</h3>
+                    <p>Designing and implementing efficient database solutions for scalable applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Recent Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card slide-up">
+                    <h3>E-commerce Platform</h3>
+                    <p>Full-stack online store with Next.js, Stripe integration, and headless CMS</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Stripe</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="project-card slide-up delay-2">
+                    <h3>Real Estate Dashboard</h3>
+                    <p>Property management system with real-time updates and analytics</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="project-card slide-up delay-4">
+                    <h3>Healthcare Portal</h3>
+                    <p>HIPAA-compliant patient management system with secure authentication</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">TypeScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-links slide-up">
+                <a href="mailto:contact@joefroula.dev" class="contact-link">
+                    <i data-lucide="mail"></i>
+                    Email
+                </a>
+                <a href="https://github.com/joefroula" class="contact-link">
+                    <i data-lucide="github"></i>
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/joefroula" class="contact-link">
+                    <i data-lucide="linkedin"></i>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© <span id="year"></span> Joe Froula. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
