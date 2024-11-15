@@ -6,6 +6,8 @@
     --text: #F9FAFB;
     --text-muted: #9CA3AF;
     --border: #374151;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    --card-hover-transform: translateY(-5px);
 }
 
 * {
@@ -146,6 +148,7 @@ nav.scroll-up {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 1rem;
+    animation: fadeIn 1s ease-out;
 }
 
 .hero h1 {
@@ -210,86 +213,92 @@ nav.scroll-up {
 .services h2 {
     font-size: 1.875rem;
     font-weight: bold;
-    margin-bottom: 2rem;
-}
-
-.services-diagram {
-    font-family: monospace;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.diagram-header {
-    color: var(--primary);
-    margin-bottom: 1rem;
-}
-
-.diagram-line {
-    width: 1px;
-    height: 1rem;
-    background-color: var(--primary);
-    margin-bottom: 1rem;
-}
-
-.diagram-branches {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    position: relative;
-    width: 100%;
-}
-
-.diagram-branches::before {
-    content: '';
-    position: absolute;
-    top: 0.5rem;
-    left: 28%;
-    width: 16%;
-    height: 1px;
-    background-color: var(--primary);
-}
-
-.diagram-branches::after {
-    content: '';
-    position: absolute;
-    top: 0.5rem;
-    right: 28%;
-    width: 16%;
-    height: 1px;
-    background-color: var(--primary);
-}
-
-.branch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.branch-title {
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-}
-
-.branch-line {
-    width: 1px;
-    height: 1rem;
-    background-color: var(--primary);
-    margin-bottom: 0.5rem;
-}
-
-.branch-items {
-    color: var(--text-muted);
+    margin-bottom: 3rem;
     text-align: center;
 }
 
-.branch-items > div {
-    margin-bottom: 0.5rem;
-    transition: color 0.2s;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
 }
 
-.branch-items > div:hover {
+.service-card {
+    background-color: var(--background-light);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--primary-hover));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(96, 165, 250, 0.1);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    background-color: var(--primary);
+    color: white;
+    transform: rotate(360deg);
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
     color: var(--text);
+}
+
+.service-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-content li {
+    color: var(--text-muted);
+    margin: 0.5rem 0;
+    transition: color 0.2s ease;
+}
+
+.service-content li:hover {
+    color: var(--primary);
 }
 
 /* Projects Section with Carousel */
@@ -437,4 +446,63 @@ footer {
 }
 
 footer .container {
-    display: flex
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.social-link:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    --background: #ffffff;
+    --background-light: #f3f4f6;
+    --text: #111827;
+    --text-muted: #4b5563;
+    --border: #e5e7eb;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .project-card {
+        min-width: calc(100% - 2rem);
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+/* Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
