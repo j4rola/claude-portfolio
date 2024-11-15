@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe Froula - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark-mode">
-    <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <span class="logo">Joe Froula</span>
@@ -25,16 +24,14 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-overlay"></div>
-        <img src="./images/mtn-range.jpg" alt="Mountain landscape at sunset" class="hero-image">
+        <img src="./images/mountain-hero.jpg" alt="Mountain landscape at sunset" class="hero-image">
         <div class="hero-content">
             <h1>
                 Building digital<br>
                 experiences that<br>
                 <span class="highlight">make an impact</span>
-                <span class="cursor"></span>
             </h1>
             <p>
                 Full-stack developer specializing in creating beautiful, 
@@ -47,7 +44,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
             <h2>Services</h2>
@@ -55,7 +51,7 @@
                 <div class="diagram-header">
                     <span>Services</span>
                 </div>
-                <div class="diagram-line vertical"></div>
+                <div class="diagram-line"></div>
                 <div class="diagram-branches">
                     <div class="branch">
                         <span class="branch-title">Frontend</span>
@@ -66,6 +62,7 @@
                             <div>Angular</div>
                         </div>
                     </div>
+                    
                     <div class="branch">
                         <span class="branch-title">Backend</span>
                         <div class="branch-line"></div>
@@ -75,6 +72,7 @@
                             <div>Java</div>
                         </div>
                     </div>
+
                     <div class="branch">
                         <span class="branch-title">DevOps</span>
                         <div class="branch-line"></div>
@@ -89,17 +87,24 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <!-- Project cards will be inserted here by JavaScript -->
+            <div class="carousel-container">
+                <button class="carousel-button prev" aria-label="Previous projects">&lt;</button>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <!-- Projects will be inserted here by JavaScript -->
+                    </div>
+                </div>
+                <button class="carousel-button next" aria-label="Next projects">&gt;</button>
+            </div>
+            <div class="carousel-dots">
+                <!-- Dots will be inserted by JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <span>© 2024 Joe Froula</span>
