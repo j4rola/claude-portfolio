@@ -159,20 +159,6 @@ nav.scroll-up {
     color: var(--primary);
 }
 
-.cursor {
-    display: inline-block;
-    width: 0.5rem;
-    height: 2rem;
-    background-color: var(--primary);
-    margin-left: 0.5rem;
-    animation: blink 1s infinite;
-    vertical-align: middle;
-}
-
-@keyframes blink {
-    50% { opacity: 0; }
-}
-
 .hero p {
     font-size: 1.25rem;
     color: var(--text-muted);
@@ -237,7 +223,6 @@ nav.scroll-up {
 .diagram-header {
     color: var(--primary);
     margin-bottom: 1rem;
-    font-size: 1.1rem;
 }
 
 .diagram-line {
@@ -307,7 +292,7 @@ nav.scroll-up {
     color: var(--text);
 }
 
-/* Projects Section */
+/* Projects Section with Carousel */
 .projects {
     padding: 4rem 0;
     background-color: var(--background-light);
@@ -320,13 +305,28 @@ nav.scroll-up {
     margin-bottom: 2rem;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+.carousel-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .project-card {
+    min-width: calc(33.333% - 2rem);
+    margin: 0 1rem;
     background-color: var(--background);
     border-radius: 0.75rem;
     padding: 1.5rem;
@@ -383,6 +383,53 @@ nav.scroll-up {
     color: white;
 }
 
+.carousel-button {
+    background: var(--background);
+    border: 1px solid var(--border);
+    color: var(--text);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.carousel-button:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.carousel-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--border);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.carousel-dot.active {
+    background-color: var(--primary);
+    transform: scale(1.2);
+}
+
 /* Footer */
 footer {
     padding: 2rem 0;
@@ -390,76 +437,4 @@ footer {
 }
 
 footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.social-links {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.social-link {
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: all 0.2s;
-}
-
-.social-link:hover {
-    color: var(--primary);
-    transform: translateY(-2px);
-}
-
-/* Scroll Behavior */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Light Mode Styles */
-body.light-mode {
-    --background: #ffffff;
-    --background-light: #f3f4f6;
-    --text: #111827;
-    --text-muted: #4b5563;
-    --border: #e5e7eb;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .diagram-branches {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .diagram-branches::before,
-    .diagram-branches::after {
-        display: none;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-links {
-        display: none;
-    }
-}
-
-/* Animation for Page Load */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.hero-content {
-    animation: fadeIn 1s ease-out;
-}
-
-.projects-grid, .services-diagram {
-    animation: fadeIn 1s ease-out 0.3s backwards;
-}
+    display: flex
