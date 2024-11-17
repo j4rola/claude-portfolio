@@ -120,22 +120,118 @@
     </section>
 
     <section id="projects" class="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="carousel-container">
-                <button class="carousel-button prev" aria-label="Previous projects">&lt;</button>
-                <div class="carousel-wrapper">
-                    <div class="carousel-track">
-                        <!-- Projects will be inserted here by JavaScript -->
+    <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./images/project1.jpg" alt="Project 1">
+                </div>
+                <h3 class="project-title">E-commerce Platform</h3>
+                <p class="project-description">
+                    A fully responsive e-commerce platform built with modern technologies.
+                    Features include user authentication, product management, and secure checkout.
+                </p>
+                <div class="project-tech">
+                    <h4>Technologies Used:</h4>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Stripe</span>
                     </div>
                 </div>
-                <button class="carousel-button next" aria-label="Next projects">&gt;</button>
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        View Code
+                    </a>
+                </div>
             </div>
-            <div class="carousel-dots">
-                <!-- Dots will be inserted by JavaScript -->
+
+            <!-- Additional Project Cards -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./images/project2.jpg" alt="Project 2">
+                </div>
+                <h3 class="project-title">Portfolio Template</h3>
+                <p class="project-description">
+                    A customizable portfolio template with dark mode support, 
+                    animations, and responsive design.
+                </p>
+                <div class="project-tech">
+                    <h4>Technologies Used:</h4>
+                    <div class="project-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        View Code
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./images/project3.jpg" alt="Project 3">
+                </div>
+                <h3 class="project-title">Blog Platform</h3>
+                <p class="project-description">
+                    A modern blog platform with markdown support, user authentication,
+                    and comment system.
+                </p>
+                <div class="project-tech">
+                    <h4>Technologies Used:</h4>
+                    <div class="project-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Prisma</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        View Code
+                    </a>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer>
         <div class="container">
